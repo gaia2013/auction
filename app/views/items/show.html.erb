@@ -21,3 +21,7 @@
 <p>
   <img src="<%= @item.image_url %>" alt="">
 </p>
+<p>
+  <a href="/items/<%= @item.id %>/edit">編集</a>
+  <a href="/items/<%= @item.id %>" data-method="delete">削除</a>
+</p>
