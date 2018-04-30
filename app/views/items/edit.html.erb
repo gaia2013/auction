@@ -1,5 +1,6 @@
 <h1>商品更新フォーム</h1>
-<%= form_with model: @item, local: true, url: {action: :update} do |form| %>
+<%= form_with model: @item, local: true do |form| %>
+
 <!-- :action => :update と同義 -->
   <p>
     商品名：<br>

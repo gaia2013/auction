@@ -17,7 +17,10 @@ class ItemsController < ApplicationController
     # 登録前にitemのオブジェクトを作らないといけない
     @item = Item.new(item_params)
     @item.save
-    redirect_to "/items/#{@item.id}"
+    # redirect_to item_path(@item.id)
+    # redirect_to item_path(@item)
+    redirect_to @item
+    # 上記３行は同義、 bin/rails routes　参照
   end
 
   def edit
@@ -33,7 +36,7 @@ class ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-    redirect_to "/items"
+    redirect_to items_path
   end
 
   private
